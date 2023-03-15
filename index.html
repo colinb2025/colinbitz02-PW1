@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-padding-top: 80px;
+    }
+  </style>
+</head>
+<body class="body">
+  <header class="header">
+    <div class="header-left">
+      <h1>Colin Bitz</h1>
+    </div>
+    <div class="header-right">
+      <button class="lightdarkswitch" id="lightdarkswitch" onclick="switchButton()">
+        <img src="content/button.png"  width="10" class="button-image">
+      </button>
+      <button class="menudropdown-btn" onclick="toggleMenuDropdown()">Menu</button>
+        <div class="menudropdown-content">
+          <ul>
+            <li><a class="menubutton1" href="#about" onclick="toggleMenuDropdown()">About</a></li>
+            <li><a class="menubutton2" href="#projects" onclick="toggleMenuDropdown()">Projects</a></li>
+            <li><a class="menubutton3" href="#skills" onclick="toggleMenuDropdown()">Skills</a></li>
+            <li><a class="menubutton4" href="#contact" onclick="toggleMenuDropdown()">Contact</a></li>
+          </ul>
+        </div>
+    </div>
+  </header>
+  
+  <main>
+    <section id="picture">
+      <div style="text-align: center";>
+        <img src="content/profile-picture.jpg" alt="Personal Picture" width="300" class="circle-image">
+      </div>
+    </section>
+    <section id="about">
+      <div class="box">
+        <h2 class="aboutmeheader">About Me</h2>
+        <p class="aboutmeinfo">I am a current second-year student-athlete at the University of Virginia.
+          I will graduate with a major in Computer Science and a minor in Data Science. I enjoy working with 
+          all fields of math and science as well as interest in working with data. I find joy in creating
+          projects and software that will help those around me. </p>
+        <p class="aboutmeinfo2">I have profound experience within a team structure, having served as a leader 
+          as well a follower. After unanimously being selected as captain of my high school team and serving 
+          as an advocate for the University of Virginia swim team in my first year, I have become comfortable 
+          in a leadership position. Additionally, I have been an employee under several companies and I have 
+          found joy in following in the footsteps of peers and finding a way to impress those around me while 
+          contributing to a team goal. </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="box2">
+        <div class="container" id="album-id">
+          <img src="content/cover.jpg" alt="Image" width="300" class="album-image">
+          <div>
+            <h1 class="album-name">Colin Bitz: Projects</h1>
+            <p class="album-info">Throughout my several years in computer science, I have found that there
+              are certain topics which stand out to me as something I'd love to learn more about. I have 
+              grown very fond of pathfinding and sorting algorithms, linked lists, and creating functional 
+              software to benefit others. In pursuit of developing a deeper understanding on these topics, 
+              I have created software relating to my points of interest. These projects include a weather 
+              app, a to-do list, a linked list visualizer, and an interactive pathfinding algorithm. Below, 
+              you will be able to find more information about each project, skills used in the project, and 
+              a link to the live product and github. Enjoy! </p>
+          </div>
+        </div>
+        <div class="album-projects-container">
+          <div id="project 1" class="projectalbum">
+            <button class="album-projects" id="project1button" onclick="openProject1()">
+              <span class="ProjectTitle">Linked List Visualizer</span>
+              <span class="ProjectDuration">Time</span>
+              <span class="ProjectSkills">Skills</span>
+            </button>
+          </div>
+          <div id="project 2" class="projectalbum">
+            <button class="album-projects2" id="project2button" onclick="openProject2()">
+              <span class="ProjectTitle">Study Games Website</span>
+              <span class="Project2Duration">Time</span>
+              <span class="ProjectSkills2">Skills</span>
+            </button>
+          </div>
+          <div id="project 3" class="projectalbum">
+            <button class="album-projects3" id="project3button" onclick="openProject3()">
+              <span class="ProjectTitle">License Plate Recognition</span>
+              <span class="Project3Duration">Time</span>
+              <span class="ProjectSkills3">Skills</span>
+            </button>
+          </div>
+          <div id="project 4" class="projectalbum">
+            <button class="album-projects4" id="project4button" onclick="openProject4()">
+              <span class="ProjectTitle">Weather App</span>
+              <span class="Project4Duration">Time</span>
+              <span class="ProjectSkills4">Skills</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projectinfo" class="hidden1">
+      <div class="overlay">
+        <div class="work">
+          <button class="pagetop" onclick="closeProject1()"></button>
+          <button class="pagebot" onclick="closeProject1()"></button>
+          <button class="pageright" onclick="closeProject1()"></button>
+          <button class="pageleft" onclick="closeProject1()"></button>
+        </div>
+        <div class="ProjectInformation">
+          <div id="header">
+            <h1 class="popupheader">Linked List Visualizer</h1>
+          </div>
+          <div class="content">
+            <div id="image">
+              <img src="content/profile-picture.jpg" class="projectimage" height="250">
+              <div>
+                <p class="projectdescription">After taking Data Structures and Algorithms,
+                  I was particularly fascinated with and successful with using Linked Lists.
+                  I was aware that a large population of my class struggled with the concepts
+                  behind linked lists so I wanted to make something to visualize the several
+                  functions that you can use on a linked list. In this project, you will find 
+                  functions including Insert/Remove at Tail/Head, Insert at Index, Find, Get, 
+                  as well as the ability to manipulate and change the linked list. 
+                </p>
+              </div>
+            </div>
+            <div id="links" class="linksandskills">
+              <a href="https://www.linkedin.com/in/colin-bitz-90b36122b/">
+                <img src="content/linkedin.png" class="profile-images" height="50">
+              </a>
+              <a href="https://github.com/colinb2025/css-html">
+                <img src="content/github.png" class="profile-images" height="50">
+              </a>
+            </div>
+            <div class="skillscontainer">
+              <span class="skillsonright">HTML</span>
+              <span class="skillsonright">CSS</span>
+              <span class="skillsonright">JS</span>
+              <span class="skillsonright">PYTHON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projectinfo" class="hidden2">
+      <div class="overlay">
+        <div class="work">
+          <button class="pagetop" onclick="closeProject2()"></button>
+          <button class="pagebot" onclick="closeProject2()"></button>
+          <button class="pageright" onclick="closeProject2()"></button>
+          <button class="pageleft" onclick="closeProject2()"></button>
+        </div>
+        <div class="Project2Information">
+          <div id="header">
+            <h1 class="popupheader">Study Games Website</h1>
+          </div>
+          <div class="content">
+            <div id="image">
+              <img src="content/profile-picture.jpg" class="projectimage" height="250">
+              <div>
+                <p class="projectdescription2">Quizlet, a famous website known for creating
+                  games built around studying, created a platform to make studying more enjoyable. 
+                  In recent years, they have made this free platform into a paid membership which
+                  has caused a deep decline in my ability to enjoy studying. That being said, I, 
+                  along with one friend, created a new website to make studying enjoyable once
+                  again. In the process, we created new games such as a kahoot-inspired mode in 
+                  addition to several other new game modes. 
+                </p>
+              </div>
+            </div>
+            <div id="links" class="linksandskills">
+              <a href="https://www.linkedin.com/in/colin-bitz-90b36122b/">
+                <img src="content/linkedin.png" class="profile-images" height="50">
+              </a>
+              <a href="https://github.com/colinb2025/css-html">
+                <img src="content/github.png" class="profile-images" height="50">
+              </a>
+            </div>
+            <div class="skillscontainer">
+              <span class="skillsonright">HTML</span>
+              <span class="skillsonright">CSS</span>
+              <span class="skillsonright">JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projectinfo" class="hidden3">
+      <div class="overlay">
+        <div class="work">
+          <button class="pagetop" onclick="closeProject3()"></button>
+          <button class="pagebot" onclick="closeProject3()"></button>
+          <button class="pageright" onclick="closeProject3()"></button>
+          <button class="pageleft" onclick="closeProject3()"></button>
+        </div>
+        <div class="Project3Information">
+          <div id="header">
+            <h1 class="popupheader">Study Games Website</h1>
+          </div>
+          <div class="content">
+            <div id="image">
+              <img src="content/profile-picture.jpg" class="projectimage" height="250">
+              <div>
+                <p class="projectdescription3">
+                </p>
+              </div>
+            </div>
+            <div id="links" class="linksandskills">
+              <a href="https://www.linkedin.com/in/colin-bitz-90b36122b/">
+                <img src="content/linkedin.png" class="profile-images" height="50">
+              </a>
+              <a href="https://github.com/colinb2025/css-html">
+                <img src="content/github.png" class="profile-images" height="50">
+              </a>
+            </div>
+            <div class="skillscontainer">
+              <span class="skillsonright">HTML</span>
+              <span class="skillsonright">CSS</span>
+              <span class="skillsonright">JS</span>
+              <span class="skillsonright">PYTHON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projectinfo" class="hidden4">
+      <div class="overlay">
+        <div class="work">
+          <button class="pagetop" onclick="closeProject4()"></button>
+          <button class="pagebot" onclick="closeProject4()"></button>
+          <button class="pageright" onclick="closeProject4()"></button>
+          <button class="pageleft" onclick="closeProject4()"></button>
+        </div>
+        <div class="Project4Information">
+          <div id="header">
+            <h1 class="popupheader">Linked List Visualizer</h1>
+          </div>
+          <div class="content">
+            <div id="image">
+              <img src="content/profile-picture.jpg" class="projectimage" height="250">
+              <div>
+                <p class="projectdescription4">After taking Data Structures and Algorithms,
+                  I was particularly fascinated with and successful with using Linked Lists.
+                  I was aware that a large population of my class struggled with the concepts
+                  behind linked lists so I wanted to make something to visualize the several
+                  functions that you can use on a linked list. In this project, you will find 
+                  functions including Insert/Remove at Tail/Head, Insert at Index, Find, Get, 
+                  as well as the ability to manipulate and change the linked list. 
+                </p>
+              </div>
+            </div>
+            <div id="links" class="linksandskills">
+              <a href="https://www.linkedin.com/in/colin-bitz-90b36122b/">
+                <img src="content/linkedin.png" class="profile-images" height="50">
+              </a>
+              <a href="https://github.com/colinb2025/css-html">
+                <img src="content/github.png" class="profile-images" height="50">
+              </a>
+            </div>
+            <div class="skillscontainer">
+              <span class="skillsonright">HTML</span>
+              <span class="skillsonright">CSS</span>
+              <span class="skillsonright">JS</span>
+              <span class="skillsonright">PYTHON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="skills">
+      <div class="buttonbox">
+        <div class="skills-dropdown">
+          <button class="skillsdropdown-btn" onclick="toggleSkillsDropdown()">Skills</button>
+          <div class="skillsdropdown-content">
+            <div>
+              <ul>
+                <li style="text-decoration: underline";>Front-End</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li style="text-decoration: underline";>Languages</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>C</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li style="text-decoration: underline";>Skills</li>
+                <li>Github</li>
+                <li>Blender</li>
+                <li>Excel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="gpt.php" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input class="inputarea1" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input class="inputarea2" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="inputarea3" id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" id="submit-btn">Send message</button>
+        </form>
+      </div>
+    </section>
+    
+  </main>
+  
+  <footer class="footer">
+    <p>&copy; 2023 Colin Bitz. All rights reserved.</p>
+  </footer>
+  
+  <script src="animations.js"></script>
+</body>
+</html>
