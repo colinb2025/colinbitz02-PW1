@@ -78,6 +78,7 @@ section h2 {
 
 .circle-image {
   border-radius: 100%;
+  width: 300px;
   border: 10px solid rgb(18, 18, 18);
   box-shadow: 0px 0px 20px rgb(255, 255, 255, 0.35);
 }
@@ -91,6 +92,7 @@ section h2 {
   border: 3px solid black;
   box-shadow: 0px 0px 20px rgb(255, 255, 255, 0.35);
   margin-top: 20px;
+  width: 300px;
   margin-right: 40px;
   margin-bottom: 20px;
   text-align: center;
@@ -1046,6 +1048,7 @@ button[type="submit"]:hover {
 .projectimage {
   margin-left: 20px;
   float: left;
+  height: 250px;
 }
 
 .projectdescription {
@@ -1164,4 +1167,56 @@ button[type="submit"]:hover {
 html {
   scroll-behavior: smooth;
   scroll-behavior: cubic-bezier(100.0, 200.0, 3000.0, 100.0);
+}
+
+@media (max-width: 550px) {
+  .circle-image {
+    width: 200px;
+  }
+
+  .album-image {
+    width: 200px;
+  }
+
+  .ProjectSkills, .ProjectSkills2, .ProjectSkills3, .ProjectSkills4 {
+    display: none;
+  }
+
+  .ProjectTitle {
+    left: 20%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .inputarea1, .inputarea2, .inputarea3 {
+    width: 92%;
+  }
+
+  .projectimage {
+    height: 120px;
+    width: 40%; 
+    object-fit: scale-down;
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .projectdescription, .projectdescription2, .projectdescription3, .projectdescription4 {
+    text-align: center;
+  }
+
+  .ProjectInformation, .Project2Information, .Project3Information, .Project4Information {
+    height: 500px;
+  }
+
+  .linksandskills {
+    padding-top: 20px;
+    float: none;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-left: 35px;
+  }
 }
